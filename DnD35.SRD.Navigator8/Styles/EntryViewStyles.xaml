@@ -1,0 +1,1213 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:System="clr-namespace:System;assembly=mscorlib" 
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:converters="clr-namespace:DnD35.SRD.Navigator8.Converters">
+
+    <System:Double x:Key="NameAndHpFontSize">26</System:Double>
+    <System:Double x:Key="EntryPivotHeaderFontSize">20</System:Double>
+    <Thickness x:Key="NameAndHpStackPanelMargin">20,20,0,50</Thickness>
+    <Thickness x:Key="NameTextBlockMargin">0,10,10,5</Thickness>
+    <FontFamily x:Key="EntryFontFamily">Global User Interface</FontFamily>
+    <Thickness x:Key="BorderThickness">1</Thickness>
+    <Thickness x:Key="InfoMargin">10</Thickness>
+    <Thickness x:Key="BorderMargin">10</Thickness>
+    <Thickness x:Key="PrimaryInfoGridMargin">10,10,10,15</Thickness>
+    <Thickness x:Key="PivotHeaderMargin">-10,0,0,0</Thickness>
+    <SolidColorBrush x:Key="AttackAndAbilityBorderBrush" Color="#FFDA850B"/>
+    <Thickness x:Key="BorderPadding">5</Thickness>
+    <SolidColorBrush x:Key="MetaBorderBrush" Color="#FF0FD3C1"/>
+    <Thickness x:Key="DomainNameMargin">10,20,0,10</Thickness>
+    <Thickness x:Key="SmallItemMargin">5,5,5,0</Thickness>
+
+    <converters:ValueConverterGroup x:Key="Capitalize">
+        <converters:StringToUpperConverter/>
+    </converters:ValueConverterGroup>
+    <converters:StripHtmlConverter x:Key="StripHtmlConverter"/>
+
+    <DataTemplate x:Key="EntryInfoViewTemplateMonster">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="NameAndHpStackPanel" Grid.Row="0" Margin="{StaticResource NameAndHpStackPanelMargin}" >
+                <TextBlock TextWrapping="Wrap" Text="{Binding Name, Converter={StaticResource Capitalize}}" FontFamily="{StaticResource EntryFontFamily}" Foreground="{StaticResource PhoneAccentBrush}" 
+					Margin="{StaticResource NameTextBlockMargin}" FontSize="{StaticResource NameAndHpFontSize}"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding Hit_Dice}" FontFamily="{StaticResource EntryFontFamily}" FontSize="{StaticResource NameAndHpFontSize}"/>
+            </StackPanel>
+            <phone:Pivot Grid.Row="1" Margin="{StaticResource PivotHeaderMargin}">
+                <phone:Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Converter={StaticResource Capitalize}}" FontSize="{StaticResource EntryPivotHeaderFontSize}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:Pivot.HeaderTemplate>
+                <phone:PivotItem Name="PrimaryInfoPivotItem" Header="Primary">
+                    <ScrollViewer  Grid.Row="0" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="PrimaryInfoGrid" Margin="{StaticResource InfoMargin}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Family:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Family}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Type:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Type}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="AC:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Armor_Class}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}" Grid.Column="0">
+                                <TextBlock Text="Speed:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Speed}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="4" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Size:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Size}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Initiative:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Initiative}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="6" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Alignment:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Alignment}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="7" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Abilities:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Abilities}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Skills:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Skills}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="9" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Space:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Space}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+                <phone:PivotItem Name="SpecsPivotItem" Header="Specs">
+                    <ScrollViewer Grid.Row="0" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="AbilityInfoGrid">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="0" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Base Attack:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Base_Attack}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Special Attacks:"  Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Special_Attacks}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Special Qualities:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Special_Qualities}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Bonus Feats:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Bonus_Feats}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Feats:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Feats}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Epic Feats:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Epic_Feats}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Special Abilities:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Special_Abilities}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+                <phone:PivotItem Name="MetaPivotItem" Header="Meta">
+                    <ScrollViewer Grid.Row="0" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="MetaGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="0" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Environment:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Environment}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Organization:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Organization}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Treasure:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Treasure}"/>
+                            </StackPanel>
+                            
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Advancement:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Advancement}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="4" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Level Adjustment:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Level_Adjustment}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+            </phone:Pivot>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="EntryInfoViewTemplateSpell">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="NameAndHpStackPanel" Grid.Row="0" Margin="{StaticResource NameAndHpStackPanelMargin}">
+                <TextBlock TextWrapping="Wrap" Text="{Binding Name, Converter={StaticResource Capitalize}}" FontFamily="{StaticResource EntryFontFamily}" Foreground="{StaticResource PhoneAccentBrush}" 
+    				Margin="{StaticResource NameTextBlockMargin}" FontSize="{StaticResource NameAndHpFontSize}"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding School}" FontFamily="{StaticResource EntryFontFamily}" FontSize="{StaticResource NameAndHpFontSize}" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <phone:Pivot Grid.Row="1" Margin="{StaticResource PivotHeaderMargin}">
+                <phone:Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Converter={StaticResource Capitalize}}" FontSize="{StaticResource EntryPivotHeaderFontSize}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:Pivot.HeaderTemplate>
+                <phone:PivotItem x:Name="PrimaryInfoPivotItem" Header="Primary">
+                    <ScrollViewer Grid.Row="0" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="PrimaryInfoGrid" Margin="{StaticResource InfoMargin}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Column="0" Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Subschool:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding SubSchool}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="DC:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding SpellCraftDC}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="1" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Level:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Level}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Components:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Components}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="5" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Target:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Target}" />
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Description}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+                <phone:PivotItem x:Name="SpecsPivotItem" Header="Specs">
+                    <ScrollViewer Grid.Row="0" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="AbilityInfoGrid">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Casting Time:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Casting_Time}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Range:"  Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Range}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Area:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Area}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Effect:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Effect}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Duration:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Duration}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Saving Throw:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Saving_Throw}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Spell Resistance:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Spell_Resistance}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="To Develop:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding ToDevelop}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+                <phone:PivotItem x:Name="MetaPivotItem" Header="Meta">
+                    <ScrollViewer Grid.Row="0" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="MetaGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Materials:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding MaterialComponents}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}" Grid.Column="1">
+                                <TextBlock Text="Arcane Materials:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding ArcaneMaterialComponents}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Focus:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Focus}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}" Grid.Column="1">
+                                <TextBlock Text="XP Cost:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding XPCost}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="5" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Arcane Focus:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding ArcaneFocus}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="6" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Wizard Focus:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding WizardFocus}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="7" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Verbal Components:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding VerbalComponents}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="8" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Sorcerer Focus:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding SorcererFocus}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="9" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Bard Focus:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding BardFocus}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="10" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Cleric Focus:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding ClericFocus}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="11" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Druid Focus:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding DruidFocus}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+            </phone:Pivot>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="EntryInfoViewTemplateDomain">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" x:Name="NameStackPanel">
+                <TextBlock TextWrapping="Wrap" Text="{Binding Name, Converter={StaticResource Capitalize}}" 
+				FontFamily="{StaticResource EntryFontFamily}" Foreground="{StaticResource PhoneAccentBrush}" 
+    				 FontSize="{StaticResource NameAndHpFontSize}" Margin="{StaticResource DomainNameMargin}"/>
+            </StackPanel>
+            <ScrollViewer Grid.Row="1" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" 
+						Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                <Grid x:Name="PrimaryInfoGrid" Margin="{StaticResource InfoMargin}" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                        <TextBlock Text="Granted Powers:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Granted_Powers}"/>
+                        <TextBlock Text="Spells:" FontSize="{StaticResource EntryInfoTitleFontSize}" Margin="0,10,0,0" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                    </StackPanel>
+                    <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Column="0" >
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Spell_1}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Spell_2}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Spell_3}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Spell_4}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Spell_5}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" >
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Spell_6}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Spell_7}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Spell_8}"/>
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Spell_9}"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="EntryInfoViewTemplateClass">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="NameAndHpStackPanel" Grid.Row="0" Margin="{StaticResource NameAndHpStackPanelMargin}">
+                <TextBlock TextWrapping="Wrap" Text="{Binding Name, Converter={StaticResource Capitalize}}" FontFamily="{StaticResource EntryFontFamily}" Foreground="{StaticResource PhoneAccentBrush}" 
+    				Margin="{StaticResource NameTextBlockMargin}" FontSize="{StaticResource NameAndHpFontSize}"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding Type, Converter={StaticResource Capitalize}}" FontFamily="{StaticResource EntryFontFamily}" FontSize="{StaticResource NameAndHpFontSize}" HorizontalAlignment="Left"/>
+            </StackPanel>
+            <phone:Pivot Grid.Row="1" Margin="{StaticResource PivotHeaderMargin}">
+                <phone:Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Converter={StaticResource Capitalize}}" FontSize="{StaticResource EntryPivotHeaderFontSize}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:Pivot.HeaderTemplate>
+                <phone:PivotItem x:Name="PrimaryInfoPivotItem" Header="Primary">
+                    <ScrollViewer BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" 
+						Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="PrimaryInfoGrid" Margin="{StaticResource InfoMargin}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Column="0" Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Alignment:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Alignment}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Hit Die:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Hit_Die}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Skills:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Class_Skills}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="4" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Skill Points:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Skill_Points}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="SP Ability:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Skill_Points_Ability}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+                <phone:PivotItem x:Name="SpecsPivotItem" Header="Specs">
+                    <ScrollViewer BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" 
+						 Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}">
+                        <Grid x:Name="AbilityInfoGrid">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Spell Stats:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Spell_Stat}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Proficiencies:"  Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Proficiencies}" />
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Spell Type:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Spell_Type}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Epic Feat Base Level:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Epic_Feat_Base_Level}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Epic Feat Interval:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Epic_Feat_Interval}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Req Race:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Req_Race}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Req Wep Proficiency:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Req_Weapon_Proficiency}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="8" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Req Base Attack Bonus:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Req_Base_Attack_Bonus}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="9" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Req Skills:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Req_Skill}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="10" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Req Feats:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Req_Feat}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="11" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Req Spells:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Req_Spells}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="12" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Req Languages:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Req_Languages}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="13" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Req Psionics:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Req_Psionics}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="14" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Req Epic Feats:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Req_Epic_Feat}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="15" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Req Special:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Req_Special}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+                <phone:PivotItem x:Name="MetaPivotItem" Header="Spell List">
+                    <ScrollViewer BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="MetaGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Spell List #1:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Spell_List_1}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Spell List #2:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Spell_List_2}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Spell List #3:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Spell_List_3}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="4" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Spell List #4:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Spell_List_4}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="5" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Spell List #5:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    									FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Spell_List_5}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+            </phone:Pivot>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="EntryInfoViewTemplateFeat">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" x:Name="NameStackPanel">
+                <TextBlock TextWrapping="Wrap" Text="{Binding Name, Converter={StaticResource Capitalize}}" 
+    				FontFamily="{StaticResource EntryFontFamily}" Foreground="{StaticResource PhoneAccentBrush}" 
+    				FontSize="{StaticResource NameAndHpFontSize}" Margin="{StaticResource DomainNameMargin}"/>
+            </StackPanel>
+            <ScrollViewer Grid.Row="1" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" 
+    			Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                <Grid x:Name="PrimaryInfoGrid" Margin="{StaticResource InfoMargin}" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                        <TextBlock Text="Type:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Type}"/>
+                    </StackPanel>
+                    <Grid Grid.Row="1" Grid.ColumnSpan="2" Margin="{StaticResource EntryInfoStackPanelMargin}" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                            <TextBlock Text="Stack:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Stack}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                            <TextBlock Text="Choice:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Choice}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                            <TextBlock Text="Prerequisite:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Prerequisite}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                            <TextBlock Text="Benefit:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Benefit, Converter={StaticResource StripHtmlConverter}}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                            <TextBlock Text="Normal:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Normal}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                            <TextBlock Text="Special:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                            <TextBlock TextWrapping="Wrap" Text="{Binding Special}"/>
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="EntryInfoViewTemplateSkill">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="NameAndHpStackPanel" Grid.Row="0" Margin="{StaticResource NameAndHpStackPanelMargin}">
+                <TextBlock TextWrapping="Wrap" Text="{Binding Name, Converter={StaticResource Capitalize}}" FontFamily="{StaticResource EntryFontFamily}" Foreground="{StaticResource PhoneAccentBrush}" 
+    				Margin="{StaticResource NameTextBlockMargin}" FontSize="{StaticResource NameAndHpFontSize}"/>
+            </StackPanel>
+            <phone:Pivot Grid.Row="1" Margin="{StaticResource PivotHeaderMargin}">
+                <phone:Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Converter={StaticResource Capitalize}}" FontSize="{StaticResource EntryPivotHeaderFontSize}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:Pivot.HeaderTemplate>
+                <phone:PivotItem x:Name="PrimaryInfoPivotItem" Header="Primary">
+                    <ScrollViewer Grid.Row="0" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="PrimaryInfoGrid" Margin="{StaticResource InfoMargin}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Column="0" Grid.Row="0" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="SubType:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding SubType}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Key Ability:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Key_Ability}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Action:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Action}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="0" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Trained:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Trained}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+                <phone:PivotItem x:Name="MetaPivotItem" Header="Meta">
+                    <ScrollViewer Grid.Row="0" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="MetaGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="AC:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Armor_Check}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}" Grid.Column="1">
+                                <TextBlock Text="Psionic:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Psionic}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}" Grid.Column="1">
+                                <TextBlock Text="Try Again:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Try_Again}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Special:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Special}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="4" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Restriction:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Restriction}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="5" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Synergy:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Synergy}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="6" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Untrained:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Untrained}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+            </phone:Pivot>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="EntryInfoViewTemplateEquipment">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="NameAndHpStackPanel" Grid.Row="0" Margin="{StaticResource SmallItemMargin}">
+                <TextBlock TextWrapping="Wrap" Text="{Binding Name, Converter={StaticResource Capitalize}}" FontFamily="{StaticResource EntryFontFamily}" Foreground="{StaticResource PhoneAccentBrush}" 
+    				    Margin="{StaticResource NameTextBlockMargin}" FontSize="{StaticResource NameAndHpFontSize}"/>
+                <!--<TextBlock TextWrapping="Wrap" Text="{Binding Full_Text}" FontFamily="{StaticResource EntryFontFamily}" 
+                         Foreground="{StaticResource EntryInfoTitleBrush}"
+    				    Margin="{StaticResource NameTextBlockMargin}" FontSize="{StaticResource EntryInfoTitleFontSize}"/>-->
+            </StackPanel>
+            <phone:Pivot Grid.Row="1" Margin="{StaticResource PivotHeaderMargin}">
+                <phone:Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Converter={StaticResource Capitalize}}" FontSize="{StaticResource EntryPivotHeaderFontSize}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:Pivot.HeaderTemplate>
+                <phone:PivotItem x:Name="PrimaryInfoPivotItem" Header="Primary">
+                    <ScrollViewer BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="PrimaryInfoGrid" Margin="{StaticResource InfoMargin}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Category:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Category}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Family:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Family}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Subcategory:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Subcategory}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Cost:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Cost}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="1" Grid.Row="4" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Damage:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Dmg_s}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="5" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="AC Penalty:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Armor_Check_Penalty}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="6" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Weight:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Weight}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="7" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Critical:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Critical}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+                <phone:PivotItem x:Name="MetaPivotItem" Header="Meta">
+                    <ScrollViewer Grid.Row="0" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="MetaGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="0" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Armor Shield Bonus:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Armor_Shield_Bonus}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Max Dex Bonus:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Maximum_Dex_Bonus}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Damage Mod:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Dmg_m}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Range Increment:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Range_Increment}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="4" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Speed 30:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Speed_30}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="5" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Speed 20:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}"/>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Speed_20}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+            </phone:Pivot>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="EntryInfoViewTemplateItem">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="NameAndHpStackPanel" Grid.Row="0" Margin="{StaticResource SmallItemMargin}" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Name, Converter={StaticResource Capitalize}}" FontFamily="{StaticResource EntryFontFamily}" Foreground="{StaticResource PhoneAccentBrush}" 
+    				Margin="{StaticResource NameTextBlockMargin}" FontSize="{StaticResource NameAndHpFontSize}"/>
+                </Grid>
+            </StackPanel>
+            <phone:Pivot Grid.Row="1" Margin="{StaticResource PivotHeaderMargin}">
+                <phone:Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Converter={StaticResource Capitalize}}" FontSize="{StaticResource EntryPivotHeaderFontSize}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:Pivot.HeaderTemplate>
+                <phone:PivotItem x:Name="PrimaryInfoPivotItem" Header="Primary">
+                    <ScrollViewer BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="PrimaryInfoGrid" Margin="{StaticResource InfoMargin}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Category:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Category}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Subcategory:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Subcategory}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Special Ability:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Special_Ability}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Aura:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Aura}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="4" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Price:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Price}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="5" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Cost:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Cost}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="6" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Weight:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Weight}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="7" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Prereqs:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Prereq}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+                <phone:PivotItem x:Name="MetaPivotItem" Header="Meta">
+                    <ScrollViewer Grid.Row="0" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="MetaGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="0" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Caster Level:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Caster_Level}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Manifester Level:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Manifester_Level}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+            </phone:Pivot>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="EntryInfoViewTemplatePower">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="NameAndHpStackPanel" Grid.Row="0" Margin="{StaticResource SmallItemMargin}" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding Name, Converter={StaticResource Capitalize}}" FontFamily="{StaticResource EntryFontFamily}" Foreground="{StaticResource PhoneAccentBrush}" 
+    				Margin="{StaticResource NameTextBlockMargin}" FontSize="{StaticResource NameAndHpFontSize}"/>
+                </Grid>
+            </StackPanel>
+            <phone:Pivot Grid.Row="1" Margin="{StaticResource PivotHeaderMargin}">
+                <phone:Pivot.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Converter={StaticResource Capitalize}}" FontSize="{StaticResource EntryPivotHeaderFontSize}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </phone:Pivot.HeaderTemplate>
+                <phone:PivotItem x:Name="PrimaryInfoPivotItem" Header="Primary">
+                    <ScrollViewer BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="PrimaryInfoGrid" Margin="{StaticResource InfoMargin}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.Row="0" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Discipline:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Discipline}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.RowSpan="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Subdiscipline:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Subdiscipline}"/>
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Level:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Level}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Display:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Display}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="4" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Range:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Range}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="5" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Target:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Target}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="6" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Area:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Area}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="7" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Effect:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Effect}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="8" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Duration:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Duration}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="9" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Saving Throw:" FontSize="{StaticResource EntryInfoTitleFontSize}" Opacity="{StaticResource EntryInfoTitleOpacity}" Foreground="{StaticResource EntryInfoTitleBrush}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Saving_Throw}"/>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+                <phone:PivotItem x:Name="MetaPivotItem" Header="Meta">
+                    <ScrollViewer Grid.Row="0" BorderThickness="{StaticResource BorderThickness}" Margin="{StaticResource BorderMargin}" Padding="{StaticResource BorderPadding}" BorderBrush="{StaticResource PhoneAccentBrush}" VerticalContentAlignment="Stretch" >
+                        <Grid x:Name="MetaGrid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="0" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Short Description:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Short_Description}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="1" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Manifesting Time:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Manifesting_Time}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="2" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Power Points:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Power_Points}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="3" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Power Resistance:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Power_Resistance}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="4" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="Augment:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Augment, Converter={StaticResource StripHtmlConverter}}"/>
+                            </StackPanel>
+                            <StackPanel Grid.ColumnSpan="2" Grid.Row="5" Margin="{StaticResource EntryInfoStackPanelMargin}">
+                                <TextBlock Text="XP Cost:" Foreground="{StaticResource EntryInfoTitleBrush}" Opacity="{StaticResource EntryInfoTitleOpacity}" 
+    								FontSize="{StaticResource EntryInfoTitleFontSize}" />
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Xp_Cost}"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </ScrollViewer>
+                </phone:PivotItem>
+            </phone:Pivot>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

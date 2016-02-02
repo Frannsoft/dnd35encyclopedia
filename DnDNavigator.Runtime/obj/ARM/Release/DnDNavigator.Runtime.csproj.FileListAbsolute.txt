@@ -1,0 +1,188 @@
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\DnDNavigator.Runtime.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\DnDNavigator.Runtime.pdb
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Community.CsharpSqlite.SqlLiteClient.WP7.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Community.CsharpSqlite.WP7.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Microsoft.Phone.Controls.Toolkit.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Sqlite.winmd
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Sqlite.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.Resources.AppResources.resources
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.csproj.GenerateResource.Cache
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.pdb
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\DnDNavigator.Runtime.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\DnDNavigator.Runtime.pdb
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Community.CsharpSqlite.SqlLiteClient.WP7.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Community.CsharpSqlite.WP7.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Microsoft.Phone.Controls.Toolkit.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Sqlite.winmd
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Sqlite.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\Bin\ARM\Release\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.Resources.AppResources.resources
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.csproj.GenerateResource.Cache
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.dll
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.pdb
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\DnDNavigator.Runtime.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\DnDNavigator.Runtime.pdb
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Community.CsharpSqlite.SqlLiteClient.WP7.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Community.CsharpSqlite.WP7.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Microsoft.Phone.Controls.Toolkit.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Newtonsoft.Json.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\protobuf-net.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Sqlite.winmd
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Newtonsoft.Json.xml
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\protobuf-net.pdb
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\protobuf-net.xml
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\Sqlite.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ar-SA\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\az-Latn-AZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\be-BY\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\bg-BG\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ca-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\es-MX\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\et-EE\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fa-IR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fil-PH\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fr-CA\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\he-IL\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\hi-IN\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\hr-HR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\kk-KZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\lt-LT\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\lv-LV\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\mk-MK\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\pt-PT\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ro-RO\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sk-SK\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sl-SI\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sq-AL\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sr-Latn-CS\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\th-TH\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\tr-TR\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\uk-UA\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\uz-Latn-UZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\vi-VN\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\Bin\ARM\Release\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.Resources.AppResources.resources
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.csproj.GenerateResource.Cache
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\obj\ARM\Release\DnDNavigator.Runtime.pdb

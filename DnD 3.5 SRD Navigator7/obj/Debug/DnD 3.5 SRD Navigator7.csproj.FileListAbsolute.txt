@@ -1,0 +1,41 @@
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\ApplicationIcon.png
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\Assets\Background.png
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\DnD 3.5 SRD Navigator.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\DnD 3.5 SRD Navigator.pdb
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\AppManifest.xaml
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\Community.CsharpSqlite.SqlLiteClient.WP7.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\Community.CsharpSqlite.WP7.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\Microsoft.Phone.Controls.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\Microsoft.Phone.Controls.xml
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\cs-CZ\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\da-DK\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\de-DE\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\el-GR\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\en-GB\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\es-ES\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\fi-FI\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\fr-FR\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\hu-HU\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\id-ID\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\it-IT\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\ja-JP\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\ko-KR\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\ms-MY\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\nb-NO\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\nl-NL\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\pl-PL\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\pt-BR\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\ru-RU\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\sv-SE\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\zh-CN\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\zh-TW\Microsoft.Phone.Controls.Toolkit.resources.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\obj\Debug\DnD 3.5 SRD Navigator7.csprojResolveAssemblyReference.cache
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\obj\Debug\App.g.cs
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\obj\Debug\ListHitViewer.g.cs
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\obj\Debug\MainPage.g.cs
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\obj\Debug\DnD 3.5 SRD Navigator.g.resources
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\obj\Debug\DnD 3.5 SRD Navigator.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\obj\Debug\DnD 3.5 SRD Navigator.pdb
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\obj\Debug\XapCacheFile.xml
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator7\Bin\Debug\DnD_3._5_SRD_Navigator.xap

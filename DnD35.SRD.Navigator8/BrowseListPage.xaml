@@ -1,0 +1,120 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+    xmlns:scm="clr-namespace:System.ComponentModel;assembly=System.Windows"
+    xmlns:ViewModel="clr-namespace:DnD35.SRD.Navigator8.ViewModel"
+    xmlns:converters="clr-namespace:DnD35.SRD.Navigator8.Converters"
+    xmlns:Command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+    xmlns:local="clr-namespace:DnD35.SRD.Navigator8"
+    xmlns:style="clr-namespace:DnD35.SRD.Navigator8.Styles"
+    x:Class="DnD35.SRD.Navigator8.BrowseListPage"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <converters:ValueConverterGroup x:Key="CapitalizeAndPluralize">
+            <converters:StringToUpperConverter/>
+            <converters:PluralConverter/>
+        </converters:ValueConverterGroup>
+        <converters:EnumToStringConverter x:Key="EnumToStringConverter"/>
+        <converters:BoolToVisibilityValueConverter x:Key="boolToVisibilityConverter"/>
+    </phone:PhoneApplicationPage.Resources>
+
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Name="HeaderStackPanel"  Grid.Row="0" Margin="0,20">
+            <ProgressBar Name="LoadingBar" Visibility="{Binding IsBusy, Converter={StaticResource boolToVisibilityConverter}}"
+                         Foreground="{StaticResource PhoneAccentBrush}" IsIndeterminate="True"/>
+            <TextBlock Text="{Binding EntryType, Converter={StaticResource CapitalizeAndPluralize}}" FontSize="30" Foreground="{StaticResource PhoneAccentBrush}" 
+                       Style="{StaticResource PhoneTextNormalStyle}"/>
+            <StackPanel Orientation="Horizontal" Margin="10,5,5,5">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Sort By:" Margin="5,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
+                    <toolkit:ListPicker Name="SortTypeListPicker" ItemsSource="{Binding SortTypes}" BorderBrush="{StaticResource PhoneAccentBrush}"
+                                    HorizontalAlignment="Left" VerticalAlignment="Center" 
+                                    FontSize="16" SelectionChanged="SortTypeListPickerSelectionChanged">
+                        <toolkit:ListPicker.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Converter={StaticResource EnumToStringConverter}}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolkit:ListPicker.ItemTemplate>
+                        <toolkit:ListPicker.FullModeItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Converter={StaticResource EnumToStringConverter}}"  FontSize="30"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolkit:ListPicker.FullModeItemTemplate>
+                    </toolkit:ListPicker>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Visibility="{Binding IsFilterable,Converter={StaticResource boolToVisibilityConverter}}">
+                    <TextBlock Text="Filter By:" Margin="5,10,10,10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" />
+                    <toolkit:ListPicker Name="FilterListPicker" ItemsSource="{Binding FilterTypes}" BorderBrush="{StaticResource PhoneAccentBrush}"
+                                    HorizontalAlignment="Left" VerticalAlignment="Center" 
+                                    FontSize="16" SelectionChanged="FilterListPickerSelectionChanged">
+                        <toolkit:ListPicker.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Converter={StaticResource EnumToStringConverter}}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolkit:ListPicker.ItemTemplate>
+                        <toolkit:ListPicker.FullModeItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Converter={StaticResource EnumToStringConverter}}"  FontSize="30"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolkit:ListPicker.FullModeItemTemplate>
+                    </toolkit:ListPicker>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="10,0,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <phone:LongListSelector x:Name="EntryLongListSelector" Grid.Row="0"
+                LayoutMode="List" IsGroupingEnabled="True" HideEmptyGroups="True"
+                JumpListStyle="{StaticResource BrowseItemJumpListStyle}" 
+                GroupHeaderTemplate="{StaticResource BrowseGroupHeaderTemplate}" 
+                ItemsSource="{Binding Entries}">
+                <phone:LongListSelector.ItemTemplate>
+                    <DataTemplate>
+                        <style:EntryDataTemplateSelector Content="{Binding}" HorizontalContentAlignment="Left" Monster="{StaticResource BrowseListViewMonsterTemplate}"
+                                                              Spell="{StaticResource BrowseListViewSpellTemplate}"
+                                                              Class="{StaticResource BrowseListViewClassTemplate}"
+                                                              Domain="{StaticResource BrowseListViewDomainTemplate}"
+                                                              Equipment="{StaticResource BrowseListViewEquipmentTemplate}"
+                                                              Feat="{StaticResource BrowseListViewFeatTemplate}"
+                                                              Item="{StaticResource BrowseListViewItemTemplate}"
+                                                              Power="{StaticResource BrowseListViewPowerTemplate}"
+                                                              Skill="{StaticResource BrowseListViewSkillTemplate}">
+                        </style:EntryDataTemplateSelector>
+                    </DataTemplate>
+                </phone:LongListSelector.ItemTemplate>
+            </phone:LongListSelector>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

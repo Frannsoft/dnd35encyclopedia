@@ -1,0 +1,169 @@
+﻿<phone:PhoneApplicationPage
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+	xmlns:toolKit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+	xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:ViewModel="clr-namespace:DnD35.SRD.Navigator8.ViewModel"
+    xmlns:style="clr-namespace:DnD35.SRD.Navigator8.Styles"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:appbarutils="clr-namespace:AppBarUtils;assembly=AppBarUtils"
+    xmlns:Command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+    xmlns:converters="clr-namespace:DnD35.SRD.Navigator8.Converters"
+	x:Class="DnD35.SRD.Navigator8.MainPage"
+	mc:Ignorable="d"
+	SupportedOrientations="Portrait" Orientation="Portrait"
+	shell:SystemTray.IsVisible="True" Loaded="PhoneApplicationPage_Loaded">
+
+    <phone:PhoneApplicationPage.Resources>
+        <shell:ApplicationBar Mode="Minimized" IsVisible="True" x:Name="HomeAppBar" BackgroundColor="{StaticResource PhoneAccentColor}">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem x:Name="ReleaseNotesMenuItem" Text="View Release Notes" Click="ReleaseNotesMenuItem_Click"/>
+                <shell:ApplicationBarMenuItem x:Name="FeedbackMenuItem" Text="Submit Feedback" Click="FeedbackMenuItem_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+
+        <shell:ApplicationBar Mode="Minimized" IsVisible="True" x:Name="FavoritesAppBar" BackgroundColor="{StaticResource PhoneAccentColor}">
+            <shell:ApplicationBar.Buttons>
+                <shell:ApplicationBarIconButton x:Name="FavoritesEnableListSelectButton" Text="Select" IconUri="/Toolkit.Content/ApplicationBar.Select.png" Click="FavoritesEnableListSelectButton_Click"/>
+            </shell:ApplicationBar.Buttons>
+        </shell:ApplicationBar>
+
+        <shell:ApplicationBar Mode="Minimized" IsVisible="True" x:Name="DeleteFavoritesAppBar" BackgroundColor="{StaticResource PhoneAccentColor}">
+            <shell:ApplicationBar.Buttons>
+                <shell:ApplicationBarIconButton x:Name="DeleteFavoritesButton" Text="Delete" IconUri="/Toolkit.Content/ApplicationBar.Delete.png" Click="DeleteFavoritesButton_Click"/>
+            </shell:ApplicationBar.Buttons>
+        </shell:ApplicationBar>
+
+        <shell:ApplicationBar Mode="Minimized" IsVisible="True" x:Name="HistoryAppBar" BackgroundColor="{StaticResource PhoneAccentColor}">
+            <shell:ApplicationBar.Buttons>
+                <shell:ApplicationBarIconButton x:Name="ClearHistoryAppBarButton" Text="Clear History" IconUri="/Assets/AppBar/delete.png" Click="ClearHistoryAppBarButton_Click"/>
+            </shell:ApplicationBar.Buttons>
+        </shell:ApplicationBar>
+
+        <shell:ApplicationBar Mode="Minimized" IsVisible="True" x:Name="PlaylistsAppBar" BackgroundColor="{StaticResource PhoneAccentColor}">
+            <shell:ApplicationBar.Buttons>
+                <shell:ApplicationBarIconButton x:Name="CreateNewPlaylistButton" Text="Create" IconUri="/Assets/AppBar/add.png" Click="CreateNewPlaylistButton_Click"/>
+                <shell:ApplicationBarIconButton x:Name="PlaylistEnableListSelectButton" Text="Select" IconUri="/Toolkit.Content/ApplicationBar.Select.png" Click="PlaylistOnSelect_Click"/>
+            </shell:ApplicationBar.Buttons>
+        </shell:ApplicationBar>
+
+        <shell:ApplicationBar Mode="Minimized" IsVisible="True" x:Name="DeletePlaylistsAppBar" BackgroundColor="{StaticResource PhoneAccentColor}">
+            <shell:ApplicationBar.Buttons>
+                <shell:ApplicationBarIconButton x:Name="DeletePlaylistsButton" Text="Delete" IconUri="/Toolkit.Content/ApplicationBar.Delete.png" Click="DeletePlaylistsButton_Click"/>
+            </shell:ApplicationBar.Buttons>
+        </shell:ApplicationBar>
+
+        <converters:BoolToVisibilityValueConverter x:Key="boolToVisibilityConverter"/>
+        <converters:ReverseBoolToVisibilityValueConverter x:Key="reverseBoolToVisibilityConverter"/>
+        <converters:StringToUpperConverter x:Key="stringToUpperConverter"/>
+    </phone:PhoneApplicationPage.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <phone:Pivot x:Name="MasterPivot" SelectionChanged="MasterPivot_SelectionChanged">
+            <phone:Pivot.Background>
+                <ImageBrush x:Name="PivotBackgroundImageBrush"  ImageSource="/Assets/ApplicationIcon.DarkTheme.png" Opacity="0.2" Stretch="None"/>
+            </phone:Pivot.Background>
+            <phone:Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <!--<Image Source="/Assets/HubIcon.png" HorizontalAlignment="Left"/>-->
+                        <TextBlock Text="{Binding}" FontSize="40" Foreground="{StaticResource PhoneAccentBrush}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </phone:Pivot.HeaderTemplate>
+            <phone:PivotItem x:Name="HomePivot" Header="DnD 3.5 ENCYCLOPEDIA" Loaded="HomePivot_Loaded" DataContext="{Binding Source={StaticResource Home}}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Name="ReleaseNotesTextBlock"  Text="RELEASE NOTES! TAP HERE!" Grid.Row="0" Foreground="Blue" Tap="ReleaseNotesTextBlock_Tap"/>
+                    <phone:LongListSelector x:Name="HomeMenuOptionsList" Grid.Row="1" ItemsSource="{Binding MenuOptions}" ItemTemplate="{StaticResource MenuOptionTemplate}">
+                    </phone:LongListSelector>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem x:Name="HistoryPivot" Header="HISTORY" >
+                <phone:LongListSelector x:Name="HistoryItemsList" ItemsSource="{Binding HistoryItems}"
+                                         LayoutMode="List" IsGroupingEnabled="True" HideEmptyGroups="True"
+                                         JumpListStyle="{StaticResource BrowseItemJumpListStyle}" 
+                                         GroupHeaderTemplate="{StaticResource BrowseGroupHeaderTemplate}">
+                    <phone:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <style:EntryDataTemplateSelector Content="{Binding}" HorizontalContentAlignment="Left"
+                                                              Monster="{StaticResource BrowseListViewMonsterTemplate}"
+                                                              Spell="{StaticResource BrowseListViewSpellTemplate}"
+                                                              Class="{StaticResource BrowseListViewClassTemplate}"
+                                                              Domain="{StaticResource BrowseListViewDomainTemplate}"
+                                                              Equipment="{StaticResource BrowseListViewEquipmentTemplate}"
+                                                              Feat="{StaticResource BrowseListViewFeatTemplate}"
+                                                              Item="{StaticResource BrowseListViewItemTemplate}"
+                                                              Power="{StaticResource BrowseListViewPowerTemplate}"
+                                                              Skill="{StaticResource BrowseListViewSkillTemplate}">
+                            </style:EntryDataTemplateSelector>
+                        </DataTemplate>
+                    </phone:LongListSelector.ItemTemplate>
+                </phone:LongListSelector>
+            </phone:PivotItem>
+            <phone:PivotItem x:Name="FavoritePivot" Header="FAVORITES">
+                <toolKit:LongListMultiSelector x:Name="FavoriteItemsList" ItemsSource="{Binding FavoriteItems}"
+                                        LayoutMode="List" IsGroupingEnabled="True" HideEmptyGroups="True"
+                                        JumpListStyle="{StaticResource BrowseItemJumpListStyle}" IsSelectionEnabledChanged="FavoriteItemsList_IsSelectionEnabledChanged"
+                                        GroupHeaderTemplate="{StaticResource BrowseGroupHeaderTemplate}">
+                    <toolKit:LongListMultiSelector.ItemTemplate>
+                        <DataTemplate>
+                            <style:EntryDataTemplateSelector Content="{Binding}" HorizontalContentAlignment="Left"
+                                                              Monster="{StaticResource BrowseListViewMonsterTemplate}"
+                                                              Spell="{StaticResource BrowseListViewSpellTemplate}"
+                                                              Class="{StaticResource BrowseListViewClassTemplate}"
+                                                              Domain="{StaticResource BrowseListViewDomainTemplate}"
+                                                              Equipment="{StaticResource BrowseListViewEquipmentTemplate}"
+                                                              Feat="{StaticResource BrowseListViewFeatTemplate}"
+                                                              Item="{StaticResource BrowseListViewItemTemplate}"
+                                                              Power="{StaticResource BrowseListViewPowerTemplate}"
+                                                              Skill="{StaticResource BrowseListViewSkillTemplate}">
+                            </style:EntryDataTemplateSelector>
+                        </DataTemplate>
+                    </toolKit:LongListMultiSelector.ItemTemplate>
+                </toolKit:LongListMultiSelector>
+            </phone:PivotItem>
+            <phone:PivotItem x:Name="PlaylistPivot" Header="PLAYLISTS">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <ProgressBar Grid.Row="0" Name="LoadingProgressBar" IsIndeterminate="True" Visibility="{Binding IsBusy, Converter={StaticResource boolToVisibilityConverter}}" />
+                    <StackPanel Grid.Row="0" Visibility="{Binding IsLicensed, Converter={StaticResource reverseBoolToVisibilityConverter}}" Margin="10">
+                        <TextBlock x:Name="PlaylistDescriptionTextBlock" TextWrapping="Wrap"
+                               Text="Create and store Playlists of Entries for your adventures!  Upgrade to Premium for a tiny one time charge ($1 USD).  This adds the ability to create as many Playlists as you want."/>
+                        <TextBlock x:Name="ThankYouSupportTextBlock" TextWrapping="Wrap" Text="Thank you for your support!" Margin="0,10,0,10"/>
+                        <TextBlock TextWrapping="Wrap" Text="*Simply reload this panel after purchasing*" Margin="0,10,0,10"/>
+                        <Button x:Name="BuyPremiumButton" Content="Upgrade to Premium" Click="BuyPremiumButton_Click" Margin="10"/>
+                    </StackPanel>
+                    <toolKit:LongListMultiSelector x:Name="PlaylistItemsList" Grid.Row="1" ItemsSource="{Binding PlaylistItems}"
+                                                           Visibility="{Binding IsLicensed, Converter={StaticResource boolToVisibilityConverter}}"
+                                                            LayoutMode="List" IsGroupingEnabled="True" HideEmptyGroups="True"
+                                                            JumpListStyle="{StaticResource BrowseItemJumpListStyle}"
+                                                            GroupHeaderTemplate="{StaticResource BrowseGroupHeaderTemplate}" IsSelectionEnabledChanged="PlaylistItemsList_IsSelectionEnabledChanged" >
+                        <toolKit:LongListMultiSelector.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="Tap">
+                                            <Command:EventToCommand Command="{Binding PlaylistsViewModel.GoToPlaylistCommand, Mode=OneWay, Source={StaticResource Locator}}" 
+                                            CommandParameter="{Binding Mode=OneWay}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                    <TextBlock Text="{Binding Name, Converter={StaticResource stringToUpperConverter}}" FontSize="25" Margin="5"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </toolKit:LongListMultiSelector.ItemTemplate>
+                    </toolKit:LongListMultiSelector>
+                </Grid>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+</phone:PhoneApplicationPage>

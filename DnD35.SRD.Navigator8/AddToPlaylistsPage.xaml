@@ -1,0 +1,55 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="DnD35.SRD.Navigator8.AddToPlaylistsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolKit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:converters="clr-namespace:DnD35.SRD.Navigator8.Converters"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+    DataContext="{StaticResource PlaylistsViewModel}">
+    
+    <phone:PhoneApplicationPage.Resources>
+        <converters:BoolToVisibilityValueConverter x:Key="boolToVisibilityConverter"/>
+        <converters:ReverseBoolToVisibilityValueConverter x:Key="reverseBoolToVisibilityConverter"/>
+        <converters:StringToUpperConverter x:Key="stringToUpperConverter"/>
+    </phone:PhoneApplicationPage.Resources>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Default" IsVisible="True" BackgroundColor="{StaticResource PhoneAccentColor}">
+            <shell:ApplicationBar.Buttons>
+                <shell:ApplicationBarIconButton x:Name="OKAppBarButton" Text="Save"
+                                                Click="OKAppBarButton_Click" IconUri="/Assets/AppBar/check.png"/>
+                <shell:ApplicationBarIconButton x:Name="CancelAppBarButton" Text="Cancel"
+                                                Click="CancelAppBarButton_Click" IconUri="/Assets/AppBar/close.png"/>
+            </shell:ApplicationBar.Buttons>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+    <phone:Pivot Name="MainPivot" Title="PLAYLISTS" Loaded="MainPivot_Loaded">
+        <phone:PivotItem>
+            <toolKit:LongListMultiSelector x:Name="PlaylistItemsList" ItemsSource="{Binding PlaylistItems}"
+                                                            IsSelectionEnabled="True"
+                                                            Visibility="{Binding IsLicensed, Converter={StaticResource boolToVisibilityConverter}}"
+                                                            LayoutMode="List" IsGroupingEnabled="True" HideEmptyGroups="True"
+                                                            JumpListStyle="{StaticResource BrowseItemJumpListStyle}"
+                                                            GroupHeaderTemplate="{StaticResource BrowseGroupHeaderTemplate}">
+                <toolKit:LongListMultiSelector.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding Name, Converter={StaticResource stringToUpperConverter}}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </toolKit:LongListMultiSelector.ItemTemplate>
+            </toolKit:LongListMultiSelector>
+        </phone:PivotItem>
+    </phone:Pivot>
+
+</phone:PhoneApplicationPage>

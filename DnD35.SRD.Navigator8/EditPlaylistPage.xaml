@@ -1,0 +1,73 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="DnD35.SRD.Navigator8.EditPlaylistPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:toolKit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:converters="clr-namespace:DnD35.SRD.Navigator8.Converters"
+    xmlns:style="clr-namespace:DnD35.SRD.Navigator8.Styles"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <phone:PhoneApplicationPage.Resources>
+        <converters:StringToUpperConverter x:Key="stringToUpperConverter"/>
+    </phone:PhoneApplicationPage.Resources>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Default" IsVisible="True" BackgroundColor="{StaticResource PhoneAccentColor}">
+            <shell:ApplicationBar.Buttons>
+                <shell:ApplicationBarIconButton x:Name="OKAppBarButton" Text="Save"
+                                                Click="OKAppBarButton_Click" IconUri="/Assets/AppBar/check.png"/>
+                <shell:ApplicationBarIconButton x:Name="CancelAppBarButton" Text="Cancel"
+                                                Click="CancelAppBarButton_Click" IconUri="/Assets/AppBar/close.png"/>
+                <shell:ApplicationBarIconButton x:Name="SelectionAppBarButton" Text="Select"
+                                                Click="SelectionAppBarButton_Click" IconUri="/Toolkit.Content/ApplicationBar.Select.png"/>
+                <shell:ApplicationBarIconButton x:Name="DeleteSelectedPlaylistItemsButton" Text="Delete" IsEnabled="False"
+                                                Click="DeleteSelectedPlaylistItemsButton_Click" IconUri="/Assets/AppBar/delete.png"/>
+            </shell:ApplicationBar.Buttons>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".3*"/>
+            <RowDefinition Height=".4*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Margin="10,10,10,10">
+            <TextBlock Text="EDIT PLAYLIST" Style="{StaticResource PhoneTextNormalStyle}" />
+            <TextBlock  Margin="12,0,12,0" Text="{Binding ElementName=PlaylistNamePhoneTextBox, Path=Text, Converter={StaticResource stringToUpperConverter}}" 
+                       FontSize="30" Foreground="{StaticResource PhoneAccentBrush}"/>
+        </StackPanel>
+            <toolKit:PhoneTextBox Name="PlaylistNamePhoneTextBox" Hint="Playlist Name..."
+                                  Grid.Row="1"
+                                  Margin="10" Text="{Binding Path=Playlist.Name, Mode=TwoWay}"/>
+        <toolKit:LongListMultiSelector x:Name="PlaylistItemsList" ItemsSource="{Binding Path=Playlist.Items}"
+                                       Grid.Row="3" LayoutMode="List" IsSelectionEnabledChanged="PlaylistItemsList_IsSelectionEnabledChanged">
+            <toolKit:LongListMultiSelector.ItemTemplate>
+                <DataTemplate>
+                    <style:EntryDataTemplateSelector Content="{Binding}" HorizontalContentAlignment="Left" Monster="{StaticResource BrowseListViewMonsterTemplate}"
+                                                              Spell="{StaticResource BrowseListViewSpellTemplate}"
+                                                              Class="{StaticResource BrowseListViewClassTemplate}"
+                                                              Domain="{StaticResource BrowseListViewDomainTemplate}"
+                                                              Equipment="{StaticResource BrowseListViewEquipmentTemplate}"
+                                                              Feat="{StaticResource BrowseListViewFeatTemplate}"
+                                                              Item="{StaticResource BrowseListViewItemTemplate}"
+                                                              Power="{StaticResource BrowseListViewPowerTemplate}"
+                                                              Skill="{StaticResource BrowseListViewSkillTemplate}">
+                    </style:EntryDataTemplateSelector>
+                </DataTemplate>
+            </toolKit:LongListMultiSelector.ItemTemplate>
+        </toolKit:LongListMultiSelector>
+    </Grid>
+
+
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,12 @@
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\DnD 3.5 SRD Navigator8.dll
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\DnD 3.5 SRD Navigator8.pdb
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\App.g.cs
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\BrowseListPage.g.cs
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\EntryPage.g.cs
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\MainPage.g.cs
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\ProximityInfo.g.cs
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\SearchPage.g.cs
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\DnD35.SRD.Navigator8.g.resources
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\DnD35.SRD.Navigator8.Resources.AppResources.resources
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\DnD35.SRD.Navigator8.csproj.GenerateResource.Cache
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\obj\Debug\DnD35.SRD.Navigator8.csprojResolveAssemblyReference.cache

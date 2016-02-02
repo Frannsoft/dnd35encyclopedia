@@ -1,0 +1,166 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:Styles="clr-namespace:DnD35.SRD.Navigator8.Styles"
+	xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+    xmlns:toolKit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+	xmlns:Command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+	xmlns:Navigator8="clr-namespace:DnD35.SRD.Navigator8"
+	xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone">
+
+    <DataTemplate x:Key="OldItemTemplate">
+        <StackPanel Margin="{StaticResource BrowseListViewStackPanelMargin}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <Command:EventToCommand Command="{Binding HistoryViewModel.NavigateToHistoryEntryCommand, Mode=OneWay, Source={StaticResource Locator}}"
+                                            CommandParameter="{Binding Mode=OneWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Name}" TextTrimming="WordEllipsis" FontSize="{StaticResource BrowseListViewNameFontSize}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrowseListViewMonsterTemplate">
+        <StackPanel Margin="{StaticResource BrowseListViewStackPanelMargin}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <Command:EventToCommand Command="{Binding MonsterBrowseListViewModel.NavigateToEntryCommand, Mode=OneWay, Source={StaticResource Locator}}" 
+                                            CommandParameter="{Binding Mode=OneWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Name}" TextTrimming="WordEllipsis" FontSize="{StaticResource BrowseListViewNameFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Challenge_Rating, StringFormat=CR: \{0\}}" Margin="{StaticResource BrowseListViewTextBlockMargin}" 
+												   TextTrimming="WordEllipsis" Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Type, StringFormat=Type: \{0\}}" Margin="{StaticResource BrowseListViewTextBlockMargin}"
+												   TextTrimming="WordEllipsis" Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrowseListViewSpellTemplate">
+        <StackPanel Margin="{StaticResource BrowseListViewStackPanelMargin}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <Command:EventToCommand Command="{Binding SpellBrowseListViewModel.NavigateToEntryCommand, Mode=OneWay, Source={StaticResource Locator}}" 
+                                            CommandParameter="{Binding Mode=OneWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Name}" TextTrimming="WordEllipsis" FontSize="{StaticResource BrowseListViewNameFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding School, StringFormat=School: \{0\}}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Target, StringFormat=Target: \{0\}}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrowseListViewClassTemplate">
+        <StackPanel Margin="{StaticResource BrowseListViewStackPanelMargin}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <Command:EventToCommand Command="{Binding ClassBrowseListViewModel.NavigateToEntryCommand, Mode=OneWay, Source={StaticResource Locator}}" 
+                                            CommandParameter="{Binding Mode=OneWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Name}" TextTrimming="WordEllipsis" FontSize="{StaticResource BrowseListViewNameFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Alignment}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Hit_Die, StringFormat=HD: \{0\}}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												  Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrowseListViewDomainTemplate">
+        <StackPanel Margin="{StaticResource BrowseListViewStackPanelMargin}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <Command:EventToCommand Command="{Binding DomainBrowseListViewModel.NavigateToEntryCommand, Mode=OneWay, Source={StaticResource Locator}}" 
+                                            CommandParameter="{Binding Mode=OneWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Name}" TextTrimming="WordEllipsis" FontSize="{StaticResource BrowseListViewNameFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Granted_Powers, StringFormat=Powers: \{0\}}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrowseListViewEquipmentTemplate">
+        <StackPanel Margin="{StaticResource BrowseListViewStackPanelMargin}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <Command:EventToCommand Command="{Binding EquipmentBrowseListViewModel.NavigateToEntryCommand, Mode=OneWay, Source={StaticResource Locator}}" 
+                                            CommandParameter="{Binding Mode=OneWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Name}" TextTrimming="WordEllipsis" FontSize="{StaticResource BrowseListViewNameFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Weight}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Category}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrowseListViewFeatTemplate">
+        <StackPanel Margin="{StaticResource BrowseListViewStackPanelMargin}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <Command:EventToCommand Command="{Binding FeatBrowseListViewModel.NavigateToEntryCommand, Mode=OneWay, Source={StaticResource Locator}}" 
+                                            CommandParameter="{Binding Mode=OneWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Name}" TextTrimming="WordEllipsis" FontSize="{StaticResource BrowseListViewNameFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Type}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Prerequisite, StringFormat=Prereq: \{0\}}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrowseListViewItemTemplate">
+        <StackPanel Margin="{StaticResource BrowseListViewStackPanelMargin}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <Command:EventToCommand Command="{Binding ItemBrowseListViewModel.NavigateToEntryCommand, Mode=OneWay, Source={StaticResource Locator}}" 
+                                            CommandParameter="{Binding Mode=OneWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Name}" TextTrimming="WordEllipsis" FontSize="{StaticResource BrowseListViewNameFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Category}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Price}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrowseListViewPowerTemplate">
+        <StackPanel Margin="{StaticResource BrowseListViewStackPanelMargin}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <Command:EventToCommand Command="{Binding PowerBrowseListViewModel.NavigateToEntryCommand, Mode=OneWay, Source={StaticResource Locator}}" 
+                                            CommandParameter="{Binding Mode=OneWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Name}" TextTrimming="WordEllipsis" FontSize="{StaticResource BrowseListViewNameFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Discipline}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Level}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrowseListViewSkillTemplate">
+        <StackPanel Margin="{StaticResource BrowseListViewStackPanelMargin}">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Tap">
+                    <Command:EventToCommand Command="{Binding SkillBrowseListViewModel.NavigateToEntryCommand, Mode=OneWay, Source={StaticResource Locator}}" 
+                                            CommandParameter="{Binding Mode=OneWay}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Name}" TextTrimming="WordEllipsis" FontSize="{StaticResource BrowseListViewNameFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding SubType, StringFormat=SubType: \{0\}}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Key_Ability, StringFormat=Ability: \{0\}}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+            <TextBlock TextWrapping="Wrap" Text="{Binding Action}" Margin="{StaticResource BrowseListViewTextBlockMargin}" TextTrimming="WordEllipsis" 
+												   Foreground="{StaticResource EntryInfoTitleBrush}" FontSize="{StaticResource BrowseListViewAttributeFontSize}"/>
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>

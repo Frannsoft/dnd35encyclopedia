@@ -1,0 +1,18 @@
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\Bin\Release\ApplicationIcon.png
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\Bin\Release\Background.png
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\Bin\Release\DnD 3.5 SRD Navigator.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\Bin\Release\DnD 3.5 SRD Navigator.pdb
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\Bin\Release\AppManifest.xaml
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\Bin\Release\DnD_3._5_SRD_Navigator.xap
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\Bin\Release\Community.CsharpSqlite.SqlLiteClient.WP7.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\Bin\Release\Community.CsharpSqlite.WP7.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\Bin\Release\Microsoft.Phone.Controls.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\Bin\Release\Microsoft.Phone.Controls.xml
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\obj\Release\App.g.cs
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\obj\Release\ListHitViewer.g.cs
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\obj\Release\MainPage.g.cs
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\obj\Release\DnD 3.5 SRD Navigator.g.resources
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\obj\Release\DnD 3.5 SRD Navigator.dll
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\obj\Release\DnD 3.5 SRD Navigator.pdb
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\obj\Release\XapCacheFile.xml
+A:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\DnD 3.5 SRD Navigator\obj\Release\DnD 3.5 SRD Navigator.csprojResolveAssemblyReference.cache

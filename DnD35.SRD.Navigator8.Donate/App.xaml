@@ -1,0 +1,33 @@
+<Application x:Class="DnD35.SRD.Navigator8.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" xmlns:vm="clr-namespace:DnD35.SRD.Navigator8.ViewModel" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" d1p1:Ignorable="d" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <!--Application Resources-->
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Styles/Styles.xaml" />
+        <ResourceDictionary Source="Styles/BrowseListViewStyles.xaml" />
+        <ResourceDictionary Source="Styles/EntryViewStyles.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+      <vm:HomeViewModel x:Key="Home" />
+      <vm:HistoryViewModel x:Key="HistoryViewModel" />
+      <vm:SearchViewModel x:Key="SearchViewModel" />
+      <vm:EntryViewModel x:Key="EntryViewModel" />
+      <vm:MonsterBrowseListViewModel x:Key="MonsterBrowseListViewModel" />
+      <vm:ClassBrowseListViewModel x:Key="ClassBrowseListViewModel" />
+      <vm:DomainBrowseListViewModel x:Key="DomainBrowseListViewModel" />
+      <vm:EquipmentBrowseListViewModel x:Key="EquipmentBrowseListViewModel" />
+      <vm:FeatBrowseListViewModel x:Key="FeatBrowseListViewModel" />
+      <vm:ItemBrowseListViewModel x:Key="ItemBrowseListViewModel" />
+      <vm:PowerBrowseListViewModel x:Key="PowerBrowseListViewModel" />
+      <vm:SkillBrowseListViewModel x:Key="SkillBrowseListViewModel" />
+      <vm:SpellBrowseListViewModel x:Key="SpellBrowseListViewModel" />
+      <vm:FavoriteViewModel x:Key="FavoriteViewModel" />
+      <vm:PlaylistsViewModel x:Key="PlaylistsViewModel" />
+      <vm:ProximityViewModel x:Key="ProximityViewModel" />
+      <vm:ViewModelLocator x:Key="Locator" />
+    </ResourceDictionary>
+  </Application.Resources>
+  <Application.ApplicationLifetimeObjects>
+    <!--Required object that handles lifetime events for the application-->
+    <shell:PhoneApplicationService Launching="Application_Launching" Closing="Application_Closing" Activated="Application_Activated" Deactivated="Application_Deactivated" />
+  </Application.ApplicationLifetimeObjects>
+</Application>

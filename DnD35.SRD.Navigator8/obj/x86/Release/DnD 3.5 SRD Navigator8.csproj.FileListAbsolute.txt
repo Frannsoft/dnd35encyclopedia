@@ -1,0 +1,7 @@
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\Dnd 3.5 SRD Navigator8\obj\x86\Release\App.g.cs
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\Dnd 3.5 SRD Navigator8\obj\x86\Release\ListHitViewer.g.cs
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\Dnd 3.5 SRD Navigator8\obj\x86\Release\MainPage.g.cs
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\Dnd 3.5 SRD Navigator8\obj\x86\Release\ProximityInfo.g.cs
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\Dnd 3.5 SRD Navigator8\obj\x86\Release\DnD 3.5 SRD Navigator8.g.resources
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\Dnd 3.5 SRD Navigator8\obj\x86\Release\DnD_3._5_SRD_Navigator8.Resources.AppResources.resources
+E:\Development\WindowsPhoneProjects\DnD 3.5 SRD Navigator\Dnd 3.5 SRD Navigator8\obj\x86\Release\DnD 3.5 SRD Navigator8.csproj.GenerateResource.Cache

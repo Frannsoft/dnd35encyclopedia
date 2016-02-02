@@ -1,0 +1,37 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="DnD35.SRD.Navigator8.SharePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True"
+    DataContext="{Binding Source={StaticResource ProximityViewModel}}" Loaded="PageLoaded">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,0,0,0">
+            <Image Source="/Assets/HubIcon.png" HorizontalAlignment="Left" Stretch="None"/>
+            <TextBlock Text="SHARING..." FontSize="40" Margin="0,20,0,20"/>
+            
+        </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <TextBlock Grid.Row="1" Margin="5,5,5,5" Name="txtInformation" Text="{Binding Path=ProximityProcess.Information}" 
+                       TextWrapping="Wrap" />
+        </ScrollViewer>
+    </Grid>
+
+</phone:PhoneApplicationPage>

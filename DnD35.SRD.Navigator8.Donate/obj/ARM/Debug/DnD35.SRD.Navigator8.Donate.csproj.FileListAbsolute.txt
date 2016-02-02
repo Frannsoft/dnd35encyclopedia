@@ -1,0 +1,5 @@
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8.Donate\obj\ARM\Debug\DnD35.SRD.Navigator8.Donate.csprojResolveAssemblyReference.cache
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8.Donate\obj\ARM\Debug\App.g.cs
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8.Donate\obj\ARM\Debug\BrowseListPage.g.cs
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8.Donate\obj\ARM\Debug\ListHitViewer.g.cs
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8.Donate\obj\ARM\Debug\MainPage.g.cs

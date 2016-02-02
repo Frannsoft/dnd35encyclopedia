@@ -1,0 +1,2 @@
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnD35.SRD.Navigator8\DnD35.SRD.Navigator8.csproj;x86
+E:\Development\WindowsPhoneProjects\DnD35.SRD.Navigator\DnDNavigator.Runtime\DnDNavigator.Runtime.csproj;x86

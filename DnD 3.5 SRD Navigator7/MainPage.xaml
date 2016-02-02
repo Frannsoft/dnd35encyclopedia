@@ -1,0 +1,152 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="DnD_3._5_SRD_Navigator7.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:toolKit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <controls:Pivot x:Name="MasterPivot" SelectionChanged="Pivot_SelectionChanged_1">
+            <controls:PivotItem Name="FavoritePivot" Header="Favorites">
+                <toolKit:LongListSelector Name="FavoritesListBox">
+                    <toolKit:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17">
+                                <TextBlock Text="{Binding ItemName}" TextWrapping="Wrap" FontSize="30" Tap="TextBlock_Tap">
+                                    <toolKit:ContextMenuService.ContextMenu>
+                                        <toolKit:ContextMenu>
+                                            <toolKit:MenuItem Name="contextFavoriteDelete" Header="Delete" Click="contextFavoriteDelete_Click"/>
+                                        </toolKit:ContextMenu>
+                                    </toolKit:ContextMenuService.ContextMenu>
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </toolKit:LongListSelector.ItemTemplate>                    
+                    <toolKit:LongListSelector.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <Border Background="{StaticResource PhoneAccentBrush}" Width="70" HorizontalAlignment="Left">
+                                <TextBlock Text="{Binding Name}" FontSize="38" Foreground="White" HorizontalAlignment="Center"  />
+                            </Border>
+                        </DataTemplate>
+                    </toolKit:LongListSelector.GroupHeaderTemplate>
+                    <toolKit:LongListSelector.GroupItemTemplate>
+                        <DataTemplate>
+                            <Border Background="{StaticResource PhoneAccentBrush}" BorderThickness="0,0,0,1">
+                                <TextBlock Text="{Binding Name}" FontSize="50" Foreground="White"  />
+                            </Border>
+                        </DataTemplate>
+                    </toolKit:LongListSelector.GroupItemTemplate>
+                </toolKit:LongListSelector>
+            </controls:PivotItem>
+            <controls:PivotItem Name="SearchPivot" Header="Search" Loaded="SearchPivot_Loaded">
+                <Grid x:Name="MasterGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <Grid x:Name="SearchGrid" Grid.Column="3" Grid.Row="2" Background="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBox Name="searchTextBox" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0"  BorderBrush="{StaticResource PhoneAccentBrush}" TextChanged="searchTextBox_TextChanged" Foreground="Black" Margin="0,0,105,0" KeyUp="searchTextBox_KeyUp" InputScope="Url"/>
+                            <Button Name="btnSearch" Grid.Column="2" Grid.Row="0" HorizontalAlignment="Right" Width="100" Loaded="btnSearch_Loaded" Click="btnSearch_Click" />
+                        </Grid>
+                    </StackPanel>
+                    <Grid Grid.Row="1">
+                        <phone:WebBrowser x:Name="browserControl" VerticalAlignment="Stretch" Margin="15" Visibility="Collapsed"/>
+                            <ListBox x:Name="HistoryListBox" Visibility="Collapsed" Foreground="{StaticResource PhoneAccentBrush}" Background="WhiteSmoke" >                        
+                                <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Margin="0,0,0,17">                                   
+                                            <TextBlock x:Name="historyTextBox" Text="{Binding ItemName}" TextWrapping="Wrap" FontSize="29" Tap="historyTextBox_Tap" />                                    
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>                          
+                        </ListBox>
+                    </Grid>
+                </Grid>
+            </controls:PivotItem>
+            <controls:PivotItem Name="CategoriesPivot" Header="Categories">
+                <ScrollViewer>
+                    <Grid x:Name="CategoriesMasterGrid">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton Name="radioMonster" Content="Monsters" Grid.Column="0" Grid.Row="0" GroupName="TypeGroup" Foreground="{StaticResource PhoneAccentBrush}"></RadioButton>
+                        <RadioButton Name="radioSpell" Content="Spells" Grid.Column="0" Grid.Row="1" GroupName="TypeGroup" Foreground="{StaticResource PhoneAccentBrush}"></RadioButton>
+                        <RadioButton Name="radioClass" Content="Class" Grid.Column="0" Grid.Row="2" GroupName="TypeGroup" Foreground="{StaticResource PhoneAccentBrush}"></RadioButton>
+                        <RadioButton Name="radioDomain" Content="Domain" Grid.Column="0" Grid.Row="3" GroupName="TypeGroup" Foreground="{StaticResource PhoneAccentBrush}"></RadioButton>
+                        <RadioButton Name="radioEquipment" Content="Equipment" Grid.Column="0" Grid.Row="4" GroupName="TypeGroup" Foreground="{StaticResource PhoneAccentBrush}"></RadioButton>
+                        <RadioButton Name="radioFeat" Content="Feats" Grid.Column="0" Grid.Row="5" GroupName="TypeGroup" Foreground="{StaticResource PhoneAccentBrush}"></RadioButton>
+                        <RadioButton Name="radioItem" Content="Items" Grid.Column="0" Grid.Row="6" GroupName="TypeGroup" Foreground="{StaticResource PhoneAccentBrush}"></RadioButton>
+                        <RadioButton Name="radioPower" Content="Powers" Grid.Column="0" Grid.Row="7" GroupName="TypeGroup" Foreground="{StaticResource PhoneAccentBrush}"></RadioButton>
+                        <RadioButton Name="radioSkill" Content="Skills" Grid.Column="0" Grid.Row="8" GroupName="TypeGroup" Foreground="{StaticResource PhoneAccentBrush}"></RadioButton>
+                    </Grid>
+                </ScrollViewer>
+            </controls:PivotItem>
+            <controls:PivotItem Name="BrowsePivot" Header="Browse">
+                <toolKit:LongListSelector Name="BrowseListBox" IsFlatList="false">
+                    <toolKit:LongListSelector.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17">
+                                <TextBlock Text="{Binding ItemName}" TextWrapping="Wrap" FontSize="30" Tap="TextBlock_Tap_1">
+                                    <toolKit:ContextMenuService.ContextMenu>
+                                        <toolKit:ContextMenu>
+                                            <toolKit:MenuItem Name="contextFavorite" Header="Add to Favorites" Click="contextFavorite_Click"/>
+                                        </toolKit:ContextMenu>
+                                    </toolKit:ContextMenuService.ContextMenu>
+                                </TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </toolKit:LongListSelector.ItemTemplate>
+                    <toolKit:LongListSelector.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <Border Background="{StaticResource PhoneAccentBrush}" Width="70" HorizontalAlignment="Left">
+                                <TextBlock Text="{Binding Name}" FontSize="38" Foreground="White" HorizontalAlignment="Center"  />
+                            </Border>
+                        </DataTemplate>
+                    </toolKit:LongListSelector.GroupHeaderTemplate>
+                    <toolKit:LongListSelector.GroupItemTemplate>
+                        <DataTemplate>
+                            <Border Background="{StaticResource PhoneAccentBrush}" BorderThickness="0,0,0,1">
+                                <TextBlock Text="{Binding Name}" FontSize="50" Foreground="White"  />
+                            </Border>
+                        </DataTemplate>
+                    </toolKit:LongListSelector.GroupItemTemplate>
+                </toolKit:LongListSelector>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+</phone:PhoneApplicationPage>

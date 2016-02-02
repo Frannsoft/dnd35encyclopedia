@@ -1,0 +1,46 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:style="clr-namespace:DnD35.SRD.Navigator8.Styles"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:converters="clr-namespace:DnD35.SRD.Navigator8.Converters"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:appbarutils="clr-namespace:AppBarUtils;assembly=AppBarUtils"
+    xmlns:DnDEntry="clr-namespace:DnDNavigator.Runtime.Model.DnDEntry;assembly=DnDNavigator.Runtime" 
+    xmlns:vm="clr-namespace:DnD35.SRD.Navigator8.ViewModel"
+    x:Name="phoneApplicationPage"
+    x:Class="DnD35.SRD.Navigator8.EntryPage"
+    mc:Ignorable="d"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" Loaded="EntryPageLoaded">
+
+    <phone:PhoneApplicationPage.Resources>
+        <converters:ValueConverterGroup x:Key="Capitalize">
+            <converters:StringToUpperConverter/>
+        </converters:ValueConverterGroup>
+    </phone:PhoneApplicationPage.Resources>
+
+    <phone:PhoneApplicationPage.DataContext>
+        <Binding Source="{StaticResource EntryViewModel}"/>
+    </phone:PhoneApplicationPage.DataContext>
+
+    <style:EntryDataTemplateSelector Content="{Binding Entry, Mode=OneWay}" VerticalContentAlignment="Top" HorizontalContentAlignment="Stretch"
+                                             Monster="{StaticResource EntryInfoViewTemplateMonster}"
+                                             Spell="{StaticResource EntryInfoViewTemplateSpell}"
+											 Domain="{StaticResource EntryInfoViewTemplateDomain}"
+											 Class="{StaticResource EntryInfoViewTemplateClass}"
+											 Feat="{StaticResource EntryInfoViewTemplateFeat}"
+											 Skill="{StaticResource EntryInfoViewTemplateSkill}"
+											 Equipment="{StaticResource EntryInfoViewTemplateEquipment}"
+                                             Item="{StaticResource EntryInfoViewTemplateItem}"
+                                             Power="{StaticResource EntryInfoViewTemplatePower}">
+        <!--<style:EntryDataTemplateSelector.DataContext>
+            <DnDEntry:Domain Name="Artifice" Granted_Powers="The character gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThaInsanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorTharacter gains an Insanity scorThe character gains an Insanity scorThe character gains an Insanity scorThe character gains an Insanity scorThe character gains an Insanity scorThe character gains an Insanity scorThe character gains an Insanity scorThe character gains an Insanity scorThe character gains an Insanity score equal to half his or her class level. For spellcasting (determining bonus spells and DCs), the character uses his or her Wisdom score plus his or her Insanity score in place of Wisdom alone.For all other purposes, such as skills and saves, use Wisdom minus Insanity in place of Wisdom.Once per day, the character can see and act with the clarity of true madness. Use the character's Insanity score as a positive rather than a negative modifier on a single roll involving Wisdom. Choose to use this power before the roll is made." Spell_1="animate rope" Spell_2="wood shape" Spell_3="stone shape" Spell_4="minor creation" Spell_5="fabricate" Spell_6="major creation" Spell_7="hardening" Spell_8="true creation" Spell_9="prismatic sphere"/>
+    	</style:EntryDataTemplateSelector.DataContext>-->
+
+    </style:EntryDataTemplateSelector>
+</phone:PhoneApplicationPage>

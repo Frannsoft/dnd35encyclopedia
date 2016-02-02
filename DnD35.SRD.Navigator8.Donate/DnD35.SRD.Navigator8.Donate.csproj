@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.props" Condition="Exists('..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71AACDB3-8BE0-4461-9395-F3094BD91F8D}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DnD35.SRD.Navigator8</RootNamespace>
+    <AssemblyName>DnD35.SRD.Navigator8.Donate</AssemblyName>
+    <TargetFrameworkIdentifier>WindowsPhone</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>DnD_3._5_SRD_Navigator8.Donate_$(Configuration)_$(Platform).xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>DnD35.SRD.Navigator8.App</SilverlightAppEntry>
+    <ValidateXaml>true</ValidateXaml>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|ARM' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\ARM\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|ARM' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\ARM\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;USE_WP8_NATIVE_SQLITE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\DnD35.SRD.Navigator8\AddToPlaylistsPage.xaml.cs">
+      <Link>AddToPlaylistsPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\BrowseListPage.xaml.cs">
+      <Link>BrowseListPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\Converters\BoolToVisibilityValueConverter.cs">
+      <Link>Converters\BoolToVisibilityValueConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\Converters\EnumToStringConverter.cs">
+      <Link>Converters\EnumToStringConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\Converters\PluralConverter.cs">
+      <Link>Converters\PluralConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\Converters\StringToUpperConverter.cs">
+      <Link>Converters\StringToUpperConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\Converters\StripHtmlConverter.cs">
+      <Link>Converters\StripHtmlConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\Converters\ValueConverterGroup.cs">
+      <Link>Converters\ValueConverterGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\Design\DesignMenuOptionsService.cs">
+      <Link>Design\DesignMenuOptionsService.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\EditPlaylistPage.xaml.cs">
+      <Link>EditPlaylistPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\EntryPage.xaml.cs">
+      <Link>EntryPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\FullTextViewerPage.xaml.cs">
+      <Link>FullTextViewerPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\MainPage.xaml.cs">
+      <Link>MainPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\MVVMLight\RelayCommand.cs">
+      <Link>MVVMLight\RelayCommand.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\MVVMLight\RelayCommandGeneric.cs">
+      <Link>MVVMLight\RelayCommandGeneric.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\Navigation\INavigationService.cs">
+      <Link>Navigation\INavigationService.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\Navigation\NavigationService.cs">
+      <Link>Navigation\NavigationService.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\SearchPage.xaml.cs">
+      <Link>SearchPage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\SharePage.xaml.cs">
+      <Link>SharePage.xaml.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\Styles\DataTemplateSelector.cs">
+      <Link>Styles\DataTemplateSelector.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\Styles\EntryDataTemplateSelector.cs">
+      <Link>Styles\EntryDataTemplateSelector.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\BaseListViewModel.cs">
+      <Link>ViewModel\BaseListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\ClassBrowseListViewModel.cs">
+      <Link>ViewModel\ClassBrowseListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\DomainListViewModel.cs">
+      <Link>ViewModel\DomainListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\EditPlaylistViewModel.cs">
+      <Link>ViewModel\EditPlaylistViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\EntryViewModel.cs">
+      <Link>ViewModel\EntryViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\EquipmentBrowseListViewModel.cs">
+      <Link>ViewModel\EquipmentBrowseListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\FavoriteViewModel.cs">
+      <Link>ViewModel\FavoriteViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\FeatBrowseListViewModel.cs">
+      <Link>ViewModel\FeatBrowseListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\HistoryViewModel.cs">
+      <Link>ViewModel\HistoryViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\HomeViewModel.cs">
+      <Link>ViewModel\HomeViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\IBrowseListViewModel.cs">
+      <Link>ViewModel\IBrowseListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\ItemBrowseListViewModel.cs">
+      <Link>ViewModel\ItemBrowseListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\MonsterBrowseListViewModel.cs">
+      <Link>ViewModel\MonsterBrowseListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\PlaylistsViewModel.cs">
+      <Link>ViewModel\PlaylistsViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\PowerBrowseListViewModel.cs">
+      <Link>ViewModel\PowerBrowseListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\ProximityViewModel.cs">
+      <Link>ViewModel\ProximityViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\SearchViewModel.cs">
+      <Link>ViewModel\SearchViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\SkillBrowseListViewModel.cs">
+      <Link>ViewModel\SkillBrowseListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\SpellBrowseListViewModel.cs">
+      <Link>ViewModel\SpellBrowseListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\DnD35.SRD.Navigator8\ViewModel\ViewModelLocator.cs">
+      <Link>ViewModel\ViewModelLocator.cs</Link>
+    </Compile>
+    <Compile Include="App.xaml.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\AppResources.Designer.cs">
+      <DependentUpon>AppResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Database\dnd35.sqlite">
+      <Link>dnd35.sqlite</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\DnD35.SRD.Navigator8\Assets\AppBar\add.png">
+      <Link>Assets\AppBar\add.png</Link>
+    </Content>
+    <Content Include="..\DnD35.SRD.Navigator8\Assets\AppBar\check.png">
+      <Link>Assets\AppBar\check.png</Link>
+    </Content>
+    <Content Include="..\DnD35.SRD.Navigator8\Assets\AppBar\close.png">
+      <Link>Assets\AppBar\close.png</Link>
+    </Content>
+    <Content Include="..\DnD35.SRD.Navigator8\Assets\AppBar\delete.png">
+      <Link>Assets\AppBar\delete.png</Link>
+    </Content>
+    <Content Include="..\DnD35.SRD.Navigator8\Assets\AppBar\edit.png">
+      <Link>Assets\AppBar\edit.png</Link>
+    </Content>
+    <Content Include="..\DnD35.SRD.Navigator8\Assets\AppBar\favs.addto.png">
+      <Link>Assets\AppBar\favs.addto.png</Link>
+    </Content>
+    <Content Include="..\DnD35.SRD.Navigator8\Assets\AppBar\favs.png">
+      <Link>Assets\AppBar\favs.png</Link>
+    </Content>
+    <Content Include="..\DnD35.SRD.Navigator8\Assets\AppBar\share.png">
+      <Link>Assets\AppBar\share.png</Link>
+    </Content>
+    <Content Include="..\DnD35.SRD.Navigator8\Assets\ApplicationIconDarkTheme.png">
+      <Link>Assets\ApplicationIconDarkTheme.png</Link>
+    </Content>
+    <Content Include="..\DnD35.SRD.Navigator8\Assets\ApplicationIconLightTheme.png">
+      <Link>Assets\ApplicationIconLightTheme.png</Link>
+    </Content>
+    <Content Include="..\DnD35.SRD.Navigator8\Assets\HubIcon.png">
+      <Link>Assets\HubIcon.png</Link>
+    </Content>
+    <Content Include="Assets\AlignmentGrid.png" />
+    <Content Include="Assets\appbar.feature.search.rest.dark.png" />
+    <Content Include="Assets\appbar.feature.search.rest.light.png" />
+    <Content Include="Assets\AppBarIcons\questionmark.png" />
+    <Content Include="Assets\AppBarIcons\share.png" />
+    <Content Include="Assets\ApplicationIcon - Iconic-Tile_medium.png" />
+    <Content Include="Assets\ApplicationIcon - Iconic-Tile_small.png" />
+    <Content Include="Assets\ApplicationIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileMedium.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\FlipCycleTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileMediumLarge.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Tiles\IconicTileSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Toolkit.Content\ApplicationBar.Add.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Cancel.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Check.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Delete.png" />
+    <Content Include="Toolkit.Content\ApplicationBar.Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="..\DnD35.SRD.Navigator8\AddToPlaylistsPage.xaml">
+      <Link>AddToPlaylistsPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\DnD35.SRD.Navigator8\BrowseListPage.xaml">
+      <Link>BrowseListPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\DnD35.SRD.Navigator8\EditPlaylistPage.xaml">
+      <Link>EditPlaylistPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\DnD35.SRD.Navigator8\EntryPage.xaml">
+      <Link>EntryPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\DnD35.SRD.Navigator8\FullTextViewerPage.xaml">
+      <Link>FullTextViewerPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\DnD35.SRD.Navigator8\MainPage.xaml">
+      <Link>MainPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\DnD35.SRD.Navigator8\SearchPage.xaml">
+      <Link>SearchPage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\DnD35.SRD.Navigator8\SharePage.xaml">
+      <Link>SharePage.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\DnD35.SRD.Navigator8\Styles\BrowseListViewStyles.xaml">
+      <Link>Styles\BrowseListViewStyles.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\DnD35.SRD.Navigator8\Styles\EntryViewStyles.xaml">
+      <Link>Styles\EntryViewStyles.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\DnD35.SRD.Navigator8\Styles\Styles.xaml">
+      <Link>Styles\Styles.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Community.CsharpSqlite.SqlLiteClient.WP7">
+      <HintPath>..\DnD 3.5 SRD Navigator7\WP7_SQLite_Assemblies\Community.CsharpSqlite.SqlLiteClient.WP7.dll</HintPath>
+    </Reference>
+    <Reference Include="Community.CsharpSqlite.WP7">
+      <HintPath>..\DnD 3.5 SRD Navigator7\WP7_SQLite_Assemblies\Community.CsharpSqlite.WP7.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\wp8\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\wp8\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platform">
+      <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\wp8\GalaSoft.MvvmLight.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack-PCL">
+      <HintPath>..\packages\HtmlAgilityPack-PCL.1.4.6\lib\HtmlAgilityPack-PCL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\packages\WPtoolkit.4.2013.08.16\lib\wp8\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Sqlite, Version=255.255.255.255, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlite-net-wp8.3.8.5\lib\windowsphone8\Sqlite.winmd</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.5.1.1.0\lib\wp8\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DnDNavigator.Runtime\DnDNavigator.Runtime.csproj">
+      <Project>{92FFA180-B840-4777-AE8A-97CFDB2F8508}</Project>
+      <Name>DnDNavigator.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="SQLite.WP80, Version=3.8.8.3">
+      <Name>SQLite for Windows Phone</Name>
+    </SDKReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.props'))" />
+    <Error Condition="!Exists('..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.targets'))" />
+    <Error Condition="!Exists('..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.props'))" />
+    <Error Condition="!Exists('..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets'))" />
+  </Target>
+  <Import Project="..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.targets" Condition="Exists('..\packages\sqlite-net-wp8.3.8.4.3\build\windowsphone8\sqlite-net-wp8.targets')" />
+  <Import Project="..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets" Condition="Exists('..\packages\sqlite-net-wp8.3.8.5\build\windowsphone8\sqlite-net-wp8.targets')" />
+</Project>
